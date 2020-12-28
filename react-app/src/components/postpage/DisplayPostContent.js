@@ -11,7 +11,6 @@ import FiberPinIcon from '@material-ui/icons/FiberPin';
 const DisplayPostContent = () => {
     const currentUser = useSelector(state => state.users.user)
     const post = useSelector(state => state.posts)
-    const postUser = useSelector(state => state.postUser)
     const currentComments = useSelector(state => state.comments)
 
     const [likes, setLikes] = useState([])
@@ -43,12 +42,10 @@ const DisplayPostContent = () => {
     // Comment slice of state is currently not functioning ideally.
     // Deleting a comment will need to be flushed out more thoroughly
     useEffect(() => {
-        // if(mounted) {
             (async () => {
                 const commentsResponse = await getComments(post.id)
                 setComments(commentsResponse.comments)
             })()
-        // }
     }, [currentComments, post.id])
 
     useEffect(() => {
@@ -75,6 +72,9 @@ const DisplayPostContent = () => {
     // Handles the button click when a user dislikes/unlikes a post
     const handleDislike = async () => {
         const response = await dislikePost(post.id, currentUser.id)
+        if (response.error) {
+            alert(response.error)
+        }
         setUserLike(false)
     }
 
