@@ -1,7 +1,7 @@
 **Developer** Derek Kim
 
 **GITHUB STATUS UPDATE**
-*Due to a corruption of git files, all changes to the Pinstagram project will be moved to the current github page. Apologies for the inconvenience, and thank you for understanding.
+* Due to a corruption of git files, all changes to the Pinstagram project will be moved to the current github page. Apologies for the inconvenience, and thank you for understanding.
 
 **Description**
 * Pixelgram is a web application where users are free to create posts which are drawn by a user using a javascript canvas.
