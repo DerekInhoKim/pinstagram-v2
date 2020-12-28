@@ -1,0 +1,713 @@
+/* TODO Add site wide styles */
+#root {
+    width: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.post_header_image{
+    max-width: 50px;
+    clip-path: circle();
+}
+
+.post_header {
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+    /* padding: 7px; */
+    /* justify-content: center; */
+}
+
+.post_header_link {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    /* justify-content: space-evenly; */
+}
+
+.post_header_username {
+    font-weight: bold;
+    font-family: Nunito Sans;
+    margin-left: 2rem;
+    color: black;
+}
+
+.post_header_follow {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.homepage_post_image {
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    /* max-width: 100%;
+    max-height: 100%; */
+}
+
+.homepage_post_date {
+    color: gray;
+    font-family: Nunito Sans;
+    margin-top: 1rem;
+    cursor: default;
+}
+
+.homepage_post_likes {
+    font-weight: bold;
+    font-family: Nunito Sans;
+    cursor: default;
+}
+
+.postpage_post_image {
+    max-width: 60rem;
+    max-height: 100%;
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    /* object-fit: cover; */
+    /* padding-right: 20px; */
+}
+
+.postpage_post_caption {
+    font-weight: bold;
+}
+
+.postpage_post_date {
+    color: lightgray
+}
+
+.postpage_post_header_container {
+    background-color: white;
+    padding: 5px;
+    font-family: Nunito Sans;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    /* overflow: auto; */
+}
+
+.postpage_post_likes {
+    margin-left: 1rem;
+}
+
+.usercard_container {
+    /* border: 1px solid black; */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 40rem;
+}
+
+.usercard_titles {
+    font-family: Nunito Sans;
+}
+
+.usercard_fullname {
+    color: gray;
+    font-size: 16px;
+}
+
+.usercard_username {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login_page_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+}
+
+.signin_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.login_form_container{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    align-content: center;
+}
+
+.login_page_image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login_form_header {
+    font-family: Pacifico, cursive;
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.signup_form_header {
+    font-family: Pacifico, cursive;
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+.createpost_container {
+    display: flex;
+    /* width: 40rem; */
+    justify-content: center;
+}
+
+.update_profile_picture_container {
+    display: flex;
+    justify-content: center;
+}
+
+.submit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0rem 2rem 2rem 2rem;
+    /* width: 20rem; */
+    height: 30rem;
+}
+
+.createpost_header {
+    display: flex;
+    justify-content: center;
+    font-family: Nunito Sans;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.update_profile_picture_header {
+    display: flex;
+    justify-content: center;
+    font-family: Nunito Sans;
+    margin-bottom: 3rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.update_profile_picture_title {
+    display: flex;
+    justify-content: center;
+    font-family: Nunito Sans;
+    font-size: medium;
+    color: gray;
+}
+
+.update_profile_picture_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    /* width: 20rem; */
+    height: 20rem;
+}
+
+.createpost_container_center {
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 30rem;
+    height: 45rem;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    /* justify-content: center; */
+}
+
+.update_profile_picture_center {
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    width: 30rem;
+    height: 40rem;
+    margin-top: 3rem;
+}
+
+.usercard_image {
+    max-width: 120px;
+    /* width: 100px; */
+    margin-right: 2rem;
+    margin-left: 2rem;
+    clip-path: circle();
+}
+
+.comment_image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    clip-path: circle();
+}
+
+.postpage_post {
+    display: flex;
+    /* border: 1px solid black; */
+    margin-top: 2rem;
+    max-height: 90rem;
+    justify-content: center;
+}
+
+.postpage_post_container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    /* box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); */
+    max-height: 40rem;
+}
+
+.postpage_display_comments {
+    max-height: 20rem;
+    overflow: auto;
+}
+
+.userpage_image {
+    max-width: 200px;
+    clip-path: circle();
+}
+
+.my_userpage_image {
+    max-width: 200px;
+    clip-path: circle();
+}
+
+.userpage_image_container {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.my_userpage_image_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.userpage_image_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.userpage_image_container:hover
+.my_userpage_image_text {
+    visibility: visible;
+}
+
+.my_userpage_image:hover {
+    /* background-color: black; */
+    opacity: 40%;
+}
+
+.userpage_post_image_container {
+    /* margin: 10px; */
+}
+
+.userpage_post_image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    clip-path: polygon(10% 10%,90% 10%,90% 90%,10% 90%);
+
+}
+
+.userpage_post_container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.userpage_post_tabs {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgray;
+}
+
+.userpage_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 40rem; */
+}
+
+.top_userpage_container {
+    /* margin-top: 40rem; */
+}
+
+.userpage_post_component_container {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.userpage_header_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 1rem;
+    font-family: Nunito Sans;
+}
+
+.userpage_header_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+
+.homepage_container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.homepage_center_container {
+    display: flex;
+    /* border: 1px solid red; */
+    width: 60rem;
+}
+
+.homepage_post_container {
+    /* border: 1px solid blue; */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    width: 70rem;
+    max-width: 70rem;
+}
+
+.homepage_post {
+    display: flex;
+    flex-direction: column;
+    max-width: 42rem;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.homepage_user_container {
+    width: 30rem;
+    margin-top: 2rem;
+
+}
+
+.homepage_post_user_title {
+    font-weight: bold;
+}
+
+.homepage_post_user_caption {
+
+}
+
+.homepage_post_user_info {
+    font-family: Nunito Sans;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+.createpost_type_button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comments_container {
+    max-height: 40rem;
+    /* max-width: 100%; */
+    width: 100%;
+    font-family: Nunito Sans;
+    /* overflow-x: visible; */
+}
+
+.display_comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    /* color: black; */
+    margin-bottom: 1rem;
+    /* overflow: visible; */
+    overflow-wrap: normal;
+}
+
+.display_comment_comment {
+    cursor: default;
+}
+
+.comment_total_link {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.display_comment_username {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.display_comments_router{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.homepage_post_content_container {
+    /* border-top: 1px solid lightgray; */
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+.homepage_post_content_container_width {
+    border-top: 1px solid lightgray;
+    width: 100%;
+    /* margin-top: 1rem; */
+}
+
+.navbar_text {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar_discover {
+    margin-right: 3rem;
+}
+
+.comments_post_container {
+    max-height: 10rem;
+    overflow: hidden;
+    /* overflow-wrap: break-word; */
+}
+
+.comment_form_container {
+    margin-top: 4px;
+    border-top: 1px solid lightgray;
+}
+
+.comment_form {
+    display: flex;
+    padding-top: 5px;
+    margin-left: 2rem;
+    /* border-top: 1px solid lightgray */
+
+}
+
+.comment_form_input {
+    width: 80%;
+    /* margin-right: 2rem; */
+}
+
+.comment_form_button_container {
+    margin-left: 10px;
+    height: 3rem;
+}
+
+.nav_container {
+    height: 5rem;
+
+}
+
+.navbar_homepage_text {
+    font-size: 30px;
+    font-family: Pacifico, cursive;
+}
+
+.navbar_container {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    justify-content: space-evenly;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    z-index: 2;
+
+}
+
+.navbar_button_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20rem;
+}
+
+.edit_form_container {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-evenly;
+    font-family: Nunito Sans;
+
+}
+
+
+.edit_form_center {
+    display: flex;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    margin-top: 3rem;
+    height: 40rem;
+    width: 30rem;
+}
+
+.edit_form_header {
+    font-size: larger;
+    /* margin-bottom: 10rem; */
+}
+
+.edit_about {
+    width: 20rem;
+    height: 10rem;
+}
+
+.edit_form_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.edit_form_input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.edit_button {
+    width: 10rem;
+    /* font-weight: bold; */
+    /* margin-bottom: 10rem; */
+}
+
+.discover_page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    font-family: Nunito Sans;
+}
+
+.discover_page_post_container{
+    /* border: 1px solid black; */
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 60rem;
+}
+
+.discover_page_header {
+    margin-top: 3rem;
+    font-weight: bold;
+    color: gray;
+    font-size: 30px;
+}
+
+.webcam_container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.webcam_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.webcam_header {
+    font-family: Nunito Sans;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.webcam_caption {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.webcam_form {
+    display: flex;
+    justify-content: center;
+}
+
+.webcam_capture_button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.camera_image_preview {
+    position: fixed;
+    height: 350px;
+    width: 350px;
+    margin-left: 35rem;
+    margin-top: -5rem;
+
+}
+
+.image_preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    height: 500px;
+    width: 450px;
+}
+
+.image_preview_header {
+    font-family: Nunito Sans;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.webcam_camera_container {
+    margin-top: 1rem;
+}
