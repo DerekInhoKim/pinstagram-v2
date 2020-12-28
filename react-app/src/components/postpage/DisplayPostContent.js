@@ -43,12 +43,12 @@ const DisplayPostContent = () => {
     // Comment slice of state is currently not functioning ideally.
     // Deleting a comment will need to be flushed out more thoroughly
     useEffect(() => {
-        if(mounted) {
+        // if(mounted) {
             (async () => {
                 const commentsResponse = await getComments(post.id)
                 setComments(commentsResponse.comments)
             })()
-        }
+        // }
     }, [currentComments, post.id])
 
     useEffect(() => {

@@ -56,7 +56,7 @@ const CreatePost = ({setAuthenticated}) => {
             <div className="top_userpage_container">
             <NavBar setAuthenticated={setAuthenticated}/>
             <div className="createpost_container">
-                <div className="createpost_container_center">
+                <div className="createpost_webcam_container_center">
                     <div className="createpost_header">
                         Create Post
                     </div>

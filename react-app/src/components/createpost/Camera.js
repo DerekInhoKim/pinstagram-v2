@@ -109,8 +109,8 @@ const WebcamComponent = () => {
                 <div className="webcam_camera_container">
                     <Webcam
                     audio={false}
-                    height={300}
-                    width={300}
+                    height={600}
+                    width={600}
                     ref={webcamRef}
                     screenshotFormat="image/jpeg"
                     videoConstraints={videoConstraints}
