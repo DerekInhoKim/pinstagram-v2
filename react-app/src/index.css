@@ -40,6 +40,7 @@ a {
     font-weight: bold;
     font-family: Nunito Sans;
     margin-left: 2rem;
+    font-size: large;
     color: black;
 }
 
@@ -195,6 +196,33 @@ a {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.userpage_header_text_container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.userpage_info_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.userpage_info_num {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.userpage_info_text {
+ margin-right: 2rem;
+}
+
+.userpage_header_text_username {
+    font-weight: bold;
 }
 
 .post_center {

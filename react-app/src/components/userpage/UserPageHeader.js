@@ -11,7 +11,11 @@ import {makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles({
     buttonStyle: {
         fontWeight: "bold",
-        color: "lightblue"
+        color: "black",
+        marginLeft: "2rem",
+    },
+    editStyle: {
+        marginLeft: "2rem",
     }
 })
 
@@ -96,16 +100,33 @@ const UserPageHeader = ({userId}) => {
                 <img onClick={myPage ? handleProfilePicture : null } className={myPage ? "my_userpage_image" : "userpage_image"} src={user.profilePicture ? user.profilePicture : emptyPicture} alt="user profile photo"/>
             </div>
             <div className="userpage_header_text">
-                <div>
+                <div className="userpage_header_text_container">
                     {user.username} {myPage ? '' : isFollowingStatus ?
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Following</Button> :
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Follow</Button>}
-                    {myPage ? <Button variant="outlined" onClick={handleEdit}>edit</Button> : ''}
+                    {myPage ? <Button className={classes.editStyle} size="small" variant="outlined" onClick={handleEdit}>edit</Button> : ''}
                 </div>
-                <div>
-                    posts {posts} followers {followers} following {following}
+                <div className="userpage_info_container">
+                    <div className="userpage_info_num">
+                        {posts}
+                    </div>
+                    <div className="userpage_info_text">
+                        posts
+                    </div>
+                    <div className="userpage_info_num">
+                        {followers}
+                    </div>
+                    <div className="userpage_info_text">
+                        followers
+                    </div>
+                    <div className="userpage_info_num">
+                        {following}
+                    </div>
+                    <div className="userpage_info_text">
+                        following
+                    </div>
                 </div>
-                <div>
+                <div className="userpage_header_text_username">
                     {user.fullname}
                 </div>
                 <div>
