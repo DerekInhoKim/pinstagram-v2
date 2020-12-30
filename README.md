@@ -5,10 +5,8 @@
 * For commits made to this project prior to 12/28/2020 please visit the github repo provided: https://github.com/derekinhokim/pinstagram
 
 **Description**
-* Pixelgram is a web application where users are free to create posts which are drawn by a user using a javascript canvas.
-The canvas is configured to be a 32 x 32 blocks which act as pixels, to reinforce the pixel art style of drawing.
-These user created pixel drawings will be saved and hosted to AWS S3 using Boto3.
-Users will be able to like and comment on another user's posts, as well as follow other users to get the newest pictures uploaded by the users they follow.
+* Pinstagram is a web application where users are free to take/upload photos to share with other users on the site. The photos are saved and hosted to AWS S3 using Boto3.
+Users will be able to like and comment on another user's posts, as well as follow other users to get the newest pictures uploaded by the users they follow. Users are urged to pin posts they enjoy, and a user's pinned posts are avaliable under their user page. Users can find new posts by users they don't follow by using the discover page.
 
 **MVP**
 * User profile and authentication (CRUD)
