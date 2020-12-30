@@ -59,12 +59,13 @@ def followRoute(followerId, followingId):
     return {'errors': 'something went wrong'}
 
 
-
+# Will return a dictionary with the key follow, and the value being a list of all users that a user is following
 @follow_routes.route('/<int:userId>/following', methods=['GET'])
 def getFollowing(userId):
     allFollowing = db.session.query(followers).filter(followers.c.followerId == userId).all()
     return {'follow': allFollowing}
 
+# Will return a dictionary with the key follow, and the value being a list of all followers for a user
 @follow_routes.route('/<int:userId>/followers', methods=['GET'])
 def getFollowers(userId):
     allFollowers = db.session.query(followers).filter(followers.c.followingId == userId).all()

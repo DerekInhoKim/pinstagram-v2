@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 # followerId is the id of the user that is the follower
-# followeringId is the user that is being followed
+# followingId is the user that is being followed
 followers = db.Table('followers',
     db.Model.metadata,
     db.Column('followerId', db.Integer,

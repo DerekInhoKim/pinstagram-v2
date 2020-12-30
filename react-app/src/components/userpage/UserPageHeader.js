@@ -89,7 +89,6 @@ const UserPageHeader = ({userId}) => {
         history.push('/edit/profile')
     }
 
-    // src={user.profilePicture ? user.profilePicture : "Mymushi.jpg"}
 
     return (
         <div className="userpage_header_container">

@@ -48,10 +48,11 @@ const PostHeader = () => {
                     </Link>
 
                 </div>
-                <div>{following ?
+                {(currentUser.id !== postUser.id) ? <div>{following ?
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Following</Button> :
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Follow</Button>}
-                </div>
+                </div> : ''}
+
             </div>
         </div>
     )

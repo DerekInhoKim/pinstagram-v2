@@ -14,16 +14,16 @@ def seed_posts(users):
             caption="Pikachu w a hat",
             userId=users[1].id),
         Post(
-            content="https://aa-reddit-clone-images.s3.amazonaws.com/pets.jpg",
-            caption="Fwower Pupper",
+            content="http://aa-pinstagram.s3.amazonaws.com/12661793_1292573587423693_5380830117439784373_n.jpg",
+            caption="Happy pup",
             userId=users[2].id),
         Post(
             content="https://aa-reddit-clone-images.s3.amazonaws.com/wholesome.png",
             caption="hehehe c:",
             userId=users[3].id),
         Post(
-            content="https://aa-reddit-clone-images.s3.amazonaws.com/salad.jpg",
-            caption="salad",
+            content="https://aa-pinstagram.s3.amazonaws.com/11046863_1069031203111267_3761018511375873640_n.jpg",
+            caption="Macaron Tower!",
             userId=users[4].id),
     ]
 

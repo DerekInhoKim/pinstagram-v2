@@ -84,9 +84,9 @@ const DisplayPostContent = () => {
         )
     }
 
-    if (!post){
+    if (!post.id){
         return (
-            null
+            "null"
         )
     }
 
@@ -99,12 +99,14 @@ const DisplayPostContent = () => {
             <div className="postpage_display_comments">{commentComponent}</div>
             <div className="postpage_post_likes">
                 {likes.length} pins
-                <IconButton>
-                        {userLike === true ?
-                        <FiberPinIcon style={{fill:"red"}} onClick={handleDislike}>unPin</FiberPinIcon> :
-                        <FiberPinIcon style={{fill: "gray"}} onClick={handleLike}>Pin</FiberPinIcon>
+                {userLike === true ?
+                        <IconButton onClick={handleDislike}>
+                            <FiberPinIcon style={{fill:"red"}} >unPin</FiberPinIcon>
+                        </IconButton> :
+                        <IconButton onClick={handleLike}>
+                            <FiberPinIcon style={{fill: "gray"}} >Pin</FiberPinIcon>
+                        </IconButton>
                         }
-                </IconButton>
             </div>
             <CommentForm postId={post.id}/>
         </div>

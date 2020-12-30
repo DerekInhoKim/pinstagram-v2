@@ -39,7 +39,7 @@ a {
 .post_header_username {
     font-weight: bold;
     font-family: Nunito Sans;
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-size: large;
     color: black;
 }
@@ -54,8 +54,7 @@ a {
     justify-content: center;
     height: 400px;
     width: 400px;
-    /* max-width: 100%;
-    max-height: 100%; */
+
 }
 
 .homepage_post_date {
@@ -76,8 +75,6 @@ a {
     max-height: 100%;
     border-radius: 2px 2px 0px 0px;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    /* object-fit: cover; */
-    /* padding-right: 20px; */
 }
 
 .postpage_post_caption {
@@ -98,7 +95,7 @@ a {
     justify-content: space-between;
     border-radius: 2px;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    /* overflow: auto; */
+
 }
 
 .postpage_post_likes {
@@ -184,7 +181,6 @@ a {
     align-items: center;
     justify-content: space-evenly;
     padding: 0rem 2rem 2rem 2rem;
-    /* width: 20rem; */
     height: 30rem;
 }
 
@@ -230,7 +226,7 @@ a {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid black; */
+
 }
 
 .post_links {
@@ -262,43 +258,34 @@ a {
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
-    /* width: 20rem; */
     height: 20rem;
 }
 
 .createpost_container_center {
     display: flex;
-    /* border: 1px solid black; */
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     width: 30rem;
     height: 45rem;
     margin-top: 3rem;
     background-color: white;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    /* justify-content: center; */
 }
 
 .createpost_webcam_container_center {
     display: flex;
-    /* border: 1px solid black; */
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     width: 50rem;
     height: 55rem;
     margin-top: 1rem;
     background-color: white;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    /* justify-content: center; */
 }
 
 .update_profile_picture_center {
     display: flex;
-    /* border: 1px solid black; */
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     background-color: white;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
@@ -309,7 +296,6 @@ a {
 
 .usercard_image {
     max-width: 120px;
-    /* width: 100px; */
     margin-right: 2rem;
     margin-left: 2rem;
     clip-path: circle();
@@ -324,7 +310,6 @@ a {
 
 .postpage_post {
     display: flex;
-    /* border: 1px solid black; */
     margin-top: 2rem;
     max-height: 90rem;
     justify-content: center;
@@ -334,7 +319,6 @@ a {
     display: flex;
     justify-content: center;
     border-radius: 2px;
-    /* box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12); */
     max-height: 40rem;
 }
 
@@ -381,13 +365,9 @@ a {
 }
 
 .my_userpage_image:hover {
-    /* background-color: black; */
     opacity: 40%;
 }
 
-.userpage_post_image_container {
-    /* margin: 10px; */
-}
 
 .userpage_post_image{
     width: 300px;
@@ -415,12 +395,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 40rem; */
 }
 
-.top_userpage_container {
-    /* margin-top: 40rem; */
-}
 
 .userpage_post_component_container {
     display: flex;
@@ -453,12 +429,10 @@ a {
 
 .homepage_center_container {
     display: flex;
-    /* border: 1px solid red; */
     width: 60rem;
 }
 
 .homepage_post_container {
-    /* border: 1px solid blue; */
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -486,9 +460,6 @@ a {
     font-weight: bold;
 }
 
-.homepage_post_user_caption {
-
-}
 
 .homepage_post_user_info {
     font-family: Nunito Sans;

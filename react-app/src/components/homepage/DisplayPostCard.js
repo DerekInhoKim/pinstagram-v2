@@ -13,17 +13,10 @@ import FiberPinIcon from '@material-ui/icons/FiberPin';
 import {makeStyles} from '@material-ui/core'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-const useStyles = makeStyles({
-    card: {
-        maxWidth: "60rem",
-    }
-})
 
 const DisplayPost = ({id, caption, content, createdAt, user}) => {
     const currentUser = useSelector(state => state.users.user)
     const currentComments = useSelector(state => state.comments)
-
-    const classes = useStyles()
 
     const [likes, setLikes] = useState([])
     const [userLike, setUserLike] = useState(false)
@@ -83,6 +76,10 @@ const DisplayPost = ({id, caption, content, createdAt, user}) => {
         )
     })
 
+    if(!(comments || likes)){
+        return null
+    }
+
 
     return (
         <Card className="homepage_post">
@@ -97,12 +94,15 @@ const DisplayPost = ({id, caption, content, createdAt, user}) => {
                     </div>
                     <div className="homepage_post_likes">
                         {likes.length} pins
-                        <IconButton>
-                            {userLike === true ?
-                            <FiberPinIcon style={{fill:"red"}} onClick={handleDislike}>unPin</FiberPinIcon> :
-                            <FiberPinIcon style={{fill: "gray"}} onClick={handleLike}>Pin</FiberPinIcon>
-                        }
+
+                        {userLike === true ?
+                        <IconButton onClick={handleDislike}>
+                            <FiberPinIcon style={{fill:"red"}} >unPin</FiberPinIcon>
+                        </IconButton> :
+                        <IconButton onClick={handleLike}>
+                            <FiberPinIcon style={{fill: "gray"}} >Pin</FiberPinIcon>
                         </IconButton>
+                        }
                     </div>
                     <div className="homepage_post_user_info"><span className="homepage_post_user_title">{user.username}</span> <span className="homepage_post_user_caption">{caption}</span></div>
                     <div className="comments_container">

@@ -5,6 +5,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ExploreIcon from '@material-ui/icons/Explore';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import HomeIcon from '@material-ui/icons/Home';
+import Avatar from '@material-ui/core/Avatar';
+import {useSelector} from 'react-redux'
 import {makeStyles} from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
@@ -12,12 +14,20 @@ const useStyles = makeStyles({
       '&.active': {
         color: "black"
       },
-      color: "gray"
+      color: "gray",
+    },
+    picture: {
+      '&.activePicture': {
+        border: "1px solid black"
+      },
+      height: "1rem",
+      width: "1rem"
     }
   }
 )
 
 const NavBar = ({ setAuthenticated }) => {
+  const currentUser = useSelector(state => state.users.user)
   const classes = useStyles()
 
   return (
@@ -30,7 +40,6 @@ const NavBar = ({ setAuthenticated }) => {
         </div>
         <div className="navbar_button_container">
           <div>
-            {/* <NavLink to ="/" exact={true} activeClassName="active"/> */}
             <IconButton className={classes.icon} component={NavLink} to ="/" activeClassName="active" exact={true}>
               <HomeIcon />
             </IconButton>
@@ -40,10 +49,15 @@ const NavBar = ({ setAuthenticated }) => {
                 <AddBoxIcon />
               </IconButton>
           </div>
-          <div className="navbar_discover">
+          <div >
               <IconButton className={classes.icon} component={NavLink} to="/discover" activeClassName="active" exact={true}>
                 <ExploreIcon />
               </IconButton>
+          </div>
+          <div className="navbar_discover">
+            <IconButton className={classes.picture} component={NavLink} to={`/user/${currentUser.id}`} activeClassName="activePicture" exact={true}>
+                  <Avatar src={currentUser.profilePicture}/>
+            </IconButton>
           </div>
           <div className="logout_button">
             <LogoutButton setAuthenticated={setAuthenticated} />
