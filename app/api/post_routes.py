@@ -15,12 +15,12 @@ def getPost(postId):
 # Returns all posts for a user
 @post_routes.route('/user/<int:userId>', methods=['GET'])
 def getPosts(userId):
-    posts = Post.query.filter(Post.userId == userId).all()
+    posts = Post.query.filter(Post.userId == userId).order_by(Post.createdAt.desc()).all()
     return {'posts': [post.to_dict() for post in posts]}
 
 @post_routes.route('/user/<int:userId>/pinned', methods=['GET'])
 def getPinnedPosts(userId):
-    posts = Post.query.join(Like).filter(Like.userId == userId).all()
+    posts = Post.query.join(Like).filter(Like.userId == userId).order_by(Post.createdAt.desc()).all()
     return {'posts': [post.to_dict() for post in posts]}
 
 # Creation of a post

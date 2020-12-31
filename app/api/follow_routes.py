@@ -22,7 +22,7 @@ def notFollowingPosts(id):
     # followingUsers is a list of users that user is following
     followingUsers = [following.id for following in users.following]
     # This query filters to find Posts where the userId is NOT in followingUsers, and is not the user themselves
-    posts = Post.query.join(User).filter(~Post.userId.in_(followingUsers)).filter(Post.userId != id).all()
+    posts = Post.query.join(User).filter(~Post.userId.in_(followingUsers)).filter(Post.userId != id).order_by(Post.createdAt.desc()).all()
     return {'posts': [post.to_user_dict() for post in posts]}
 
 

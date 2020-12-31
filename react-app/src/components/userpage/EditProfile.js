@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import { Redirect } from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux'
 import {editUser} from '../../services/auth'
 import {setUser} from '../../redux/actions/users'
-import {Button, TextField, TextareaAutosize} from '@material-ui/core';
+import {useHistory} from 'react-router-dom'
+import {Button, TextField} from '@material-ui/core';
 import NavBar from '../NavBar'
 
 const EditProfile = ({setAuthenticated}) => {
+  const currentUser = useSelector(state => state.users.user)
   const [fullName, setFullName] = useState('');
   const [userName, setUserName] = useState('');
   const [about, setAbout] = useState('');
-  const [updated, setUpdated] = useState(false)
   const dispatch = useDispatch();
+  const history = useHistory()
 
   const updateFullname = (e) => {
       setFullName(e.target.value);
@@ -28,15 +29,13 @@ const EditProfile = ({setAuthenticated}) => {
   const handleEdit = async (e) => {
       e.preventDefault();
       const user = await editUser(fullName, userName, about)
-      if (!user.errors){
+      if (user){
           dispatch(setUser(user))
-          setUpdated(true)
+          history.push(`/user/${currentUser.id}`)
+          window.location.reload()
       }
   }
 
-  if(updated){
-        return <Redirect to="/"/>
-  }
 
   return (
     <div className="top_userpage_container">

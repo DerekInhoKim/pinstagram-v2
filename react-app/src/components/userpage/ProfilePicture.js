@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import {uploadImage} from '../../services/post'
 import {setPicture} from '../../services/user'
+import {setUser} from '../../redux/actions/users';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 import NavBar from '../NavBar'
@@ -10,6 +11,7 @@ import NavBar from '../NavBar'
 const ProfilePictureUpload = ({setAuthenticated}) => {
     const currentUser = useSelector(state => state.users.user)
     const [image, setImage] = useState({})
+    const dispatch = useDispatch()
     let history = useHistory()
 
     const setImageHelper = (e) => {
@@ -27,9 +29,10 @@ const ProfilePictureUpload = ({setAuthenticated}) => {
 
         const user = await setPicture(imageUrl)
         if(user){
+            dispatch(setUser(user))
             history.push(`/user/${currentUser.id}`)
+            window.location.reload()
         }
-
 
     }
 
