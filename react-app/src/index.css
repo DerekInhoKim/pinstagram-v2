@@ -301,6 +301,10 @@ a {
     clip-path: circle();
 }
 
+.image_profile {
+    clip-path: circle();
+}
+
 .comment_image {
     width: 50px;
     height: 50px;

@@ -65,10 +65,6 @@ const WebcamComponent = () => {
         return new File([u8arr], filename, {type:mime});
     }
 
-    const updateValue = (setfunc) => (e) => {
-        setfunc(e.target.value)
-    }
-
     const setPreviewHelper = () => {
         if (preview){
             setPreview(false)
@@ -83,24 +79,6 @@ const WebcamComponent = () => {
             setImgSrc(webcamRef.current.getScreenshot())
 
         },[webcamRef])
-
-    // const submitImagePost = async (e) => {
-    //     e.preventDefault();
-    //     const data = new FormData();
-    //     data.append("file", image)
-    //     console.log(image)
-
-    //     const newImage = await uploadImage(data)
-    //     const imageUrl = newImage.output
-
-    //     const post = await createPost( caption, imageUrl);
-    //     if(!post.errors){
-    //         setRedirect(true)
-
-    //     } else {
-    //         console.log('something went wrong', image)
-    //     }
-    // }
 
     const submitProfilePicture = async (e) => {
         e.preventDefault();
@@ -146,18 +124,6 @@ const WebcamComponent = () => {
             </div>
             <div className="webcam_caption">
                 <form className="webcam_form" encType='multipart/formdata' onSubmit={submitProfilePicture}>
-                    {/* <TextField
-                            name='caption'
-                            type='text'
-                            label="Caption"
-                            variant="outlined"
-                            placeholder='Tell us about your image...'
-                            value={caption}
-                            onChange={updateValue(setCaption)}
-                            required
-                            fullWidth
-                            /> */}
-                    {/* <TextField fullWidth variant="outlined" type="file" name="user_file" required onChange={setImageHelper}/> */}
                     <Button className="edit_button" color="primary" variant="contained" type="submit">Post</Button>
                 </form>
             </div>
@@ -165,7 +131,7 @@ const WebcamComponent = () => {
                 {preview && imgSrc &&
                 (<div className="image_preview">
                     <div className="image_preview_header">Preview Photo</div>
-                    <img
+                    <img className="image_profile"
                     src={imgSrc}
                     height={400}
                     width={400}
