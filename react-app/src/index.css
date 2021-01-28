@@ -23,17 +23,13 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     flex-direction: row;
-    /* padding: 7px; */
-    /* justify-content: center; */
 }
 
 .post_header_link {
     display: flex;
     align-items: center;
     margin: 1rem;
-    /* justify-content: space-evenly; */
 }
 
 .post_header_username {
@@ -103,7 +99,6 @@ a {
 }
 
 .usercard_container {
-    /* border: 1px solid black; */
     position: fixed;
     display: flex;
     align-items: center;
@@ -166,7 +161,6 @@ a {
 
 .createpost_container {
     display: flex;
-    /* width: 40rem; */
     justify-content: center;
 }
 
@@ -478,10 +472,8 @@ a {
 
 .comments_container {
     max-height: 40rem;
-    /* max-width: 100%; */
     width: 100%;
     font-family: Nunito Sans;
-    /* overflow-x: visible; */
 }
 
 .display_comments {
@@ -490,9 +482,8 @@ a {
     align-items: center;
     text-decoration: none;
     font-size: 14px;
-    /* color: black; */
     margin-bottom: 1rem;
-    /* overflow: visible; */
+
     overflow-wrap: normal;
 }
 
@@ -520,7 +511,6 @@ a {
 }
 
 .homepage_post_content_container {
-    /* border-top: 1px solid lightgray; */
     margin-left: 10px;
     margin-right: 10px;
     width: 95%;
@@ -529,7 +519,6 @@ a {
 .homepage_post_content_container_width {
     border-top: 1px solid lightgray;
     width: 100%;
-    /* margin-top: 1rem; */
 }
 
 .navbar_text {
@@ -544,7 +533,6 @@ a {
 .comments_post_container {
     max-height: 10rem;
     overflow: hidden;
-    /* overflow-wrap: break-word; */
 }
 
 .comment_form_container {
@@ -556,13 +544,11 @@ a {
     display: flex;
     padding-top: 5px;
     margin-left: 2rem;
-    /* border-top: 1px solid lightgray */
 
 }
 
 .comment_form_input {
     width: 80%;
-    /* margin-right: 2rem; */
 }
 
 .comment_form_button_container {
@@ -601,7 +587,6 @@ a {
 
 .edit_form_container {
     display: flex;
-    /* border: 1px solid black; */
     justify-content: space-evenly;
     font-family: Nunito Sans;
 
@@ -614,7 +599,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid black; */
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
     margin-top: 3rem;
     height: 40rem;
@@ -623,7 +607,6 @@ a {
 
 .edit_form_header {
     font-size: larger;
-    /* margin-bottom: 10rem; */
 }
 
 .edit_about {
@@ -647,20 +630,16 @@ a {
 
 .edit_button {
     width: 10rem;
-    /* font-weight: bold; */
-    /* margin-bottom: 10rem; */
 }
 
 .discover_page_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid black; */
     font-family: Nunito Sans;
 }
 
 .discover_page_post_container{
-    /* border: 1px solid black; */
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
