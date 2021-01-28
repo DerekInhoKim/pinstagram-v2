@@ -18,7 +18,7 @@ export const likePost = async (postId, userId) => {
         })
     })
     if (!response.ok){
-        console.log('something went wrong')
+        // console.log('something went wrong')
         return await response.json()
     }
     return await response.json()

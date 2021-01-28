@@ -84,7 +84,7 @@ const WebcamComponent = () => {
         e.preventDefault();
         const data = new FormData();
         data.append("file", image)
-        console.log(image)
+        // console.log(image)
 
         const newImage = await uploadImage(data)
         const imageUrl = newImage.output
@@ -94,7 +94,7 @@ const WebcamComponent = () => {
             setRedirect(true)
 
         } else {
-            console.log('something went wrong', image)
+            // console.log('something went wrong', image)
         }
     }
 
