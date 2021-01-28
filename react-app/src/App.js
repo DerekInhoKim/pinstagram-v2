@@ -18,7 +18,7 @@ import {getUserFollowers} from './services/user'
 import {setFollowers} from './redux/actions/followers'
 import {setFollowing} from './redux/actions/following'
 import {setUser} from './redux/actions/users'
-import WebcamComponent from "./components/createpost/Camera";
+
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
