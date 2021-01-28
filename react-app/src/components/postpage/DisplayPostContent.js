@@ -93,7 +93,6 @@ const DisplayPostContent = () => {
     return (
         <div className="postpage_post_header_container">
             <PostHeader />
-            {/* Post caption should be styled seperately. similarly to a comment */}
             <div className="postpage_post_caption">{post.caption}</div>
             <div className="postpage_post_date">{post.createdAt}</div>
             <div className="postpage_display_comments">{commentComponent}</div>
