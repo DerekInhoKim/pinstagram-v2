@@ -187,7 +187,6 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
             />
           </div>
           <Button className={classes.buttonStyle} color="primary" variant="contained" type="submit">Sign Up</Button>
-          {/* <button type="submit">Sign Up</button> */}
         </form>
         <div className={classes.logIn}>
               Already have an account? <Button onClick={handleLogin} color="primary">Login</Button>
