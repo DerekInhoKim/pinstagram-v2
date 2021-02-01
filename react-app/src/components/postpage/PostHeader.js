@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {isFollowing, followUser} from '../../services/following'
 import {Button} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal'
 
 const useStyles = makeStyles({
     buttonStyle: {
@@ -19,6 +20,7 @@ const PostHeader = () => {
     const postUser = useSelector(state => state.postUser)
     const [following, setFollowing] = useState(false)
     const [isFollowingState, setIsFollowingState] = useState(false)
+    const [deleteModal, setDeleteModal] = useState(false)
 
     const classes = useStyles()
 
@@ -34,6 +36,14 @@ const PostHeader = () => {
     const handleFollow = async () => {
         const followingStatus = await followUser(currentUser.id, postUser.id)
         setIsFollowingState(followingStatus)
+    }
+
+    const showDelete =  () => {
+        setDeleteModal(true)
+    }
+
+    const hideDelete = () => {
+        setDeleteModal(false)
     }
 
     return (
@@ -52,8 +62,19 @@ const PostHeader = () => {
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Following</Button> :
                     <Button className={classes.buttonStyle} onClick={handleFollow}>Follow</Button>}
                 </div> : ''}
+                {currentUser.id === postUser.id ?
+                    <div>
+                        <Button className={classes.buttonStyle} onClick={showDelete}>Delete</Button>
+                        <Modal
+                        open={deleteModal}
+                        onClose={hideDelete}
+                        >
+                            {/* {"are you sure?"} */}
+                        </Modal>
+                    </div> : ""}
 
             </div>
+
         </div>
     )
 }
