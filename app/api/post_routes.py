@@ -41,3 +41,12 @@ def createPost():
             return post.to_dict()
         except IntegrityError:
             return {"error": "new error"}
+
+
+@post_routes.route('/<int:postId>', methods=['DELETE'])
+@login_required
+def deletePost(postId):
+    post = Post.query.filter(Post.id == postId).one()
+    db.session.delete(post)
+    db.session.commit()
+    return {'message': 'success'}
