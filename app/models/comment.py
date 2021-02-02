@@ -6,7 +6,7 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     message = db.Column(db.String(255), nullable=False)
-    postId = db.Column(db.Integer, db.ForeignKey("posts.id"), nullable=False)
+    postId = db.Column(db.Integer, db.ForeignKey("posts.id", ondelete='CASCADE'), nullable=False)
     userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     createdAt = db.Column(db.DateTime, server_default=db.func.now())
 

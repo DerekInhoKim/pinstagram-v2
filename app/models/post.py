@@ -11,8 +11,8 @@ class Post(db.Model):
     createdAt = db.Column(db.DateTime, server_default=db.func.now())
 
     user = db.relationship("User", back_populates="posts")
-    comments = db.relationship("Comment", back_populates="post")
-    likes = db.relationship("Like", back_populates="post")
+    comments = db.relationship("Comment", back_populates="post", cascade="all, delete", passive_deletes=True)
+    likes = db.relationship("Like", back_populates="post", cascade="all, delete", passive_deletes=True)
 
     def to_dict(self):
         return {
