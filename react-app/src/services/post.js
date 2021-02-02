@@ -4,6 +4,16 @@ export const getPost = async (postId) => {
     return await response.json()
 }
 
+export const deletePost = async(postId) => {
+  const response = await fetch(`/api/posts/${postId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  return await response.json()
+}
+
 // Returns all posts for a specific user
 export const getPosts = async (userId) => {
     const response = await fetch(`/api/posts/user/${userId}`)
