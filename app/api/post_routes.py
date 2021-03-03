@@ -42,7 +42,7 @@ def createPost():
         except IntegrityError:
             return {"error": "new error"}
 
-
+# Deletes a post
 @post_routes.route('/<int:postId>', methods=['DELETE'])
 @login_required
 def deletePost(postId):

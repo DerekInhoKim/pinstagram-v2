@@ -5,7 +5,6 @@ import {setPicture} from '../../services/user'
 import {setUser} from '../../redux/actions/users';
 import {useSelector, useDispatch} from 'react-redux'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
 import {uploadImage, getPosts} from '../../services/post'
 
 const videoConstraints = {
@@ -20,7 +19,6 @@ const WebcamComponent = () => {
     const [imgSrc, setImgSrc] = useState(null)
     const [image, setImage] = useState({})
     const [fileName, setFileName] = useState("")
-    const [caption, setCaption] = useState("")
     const [redirect, setRedirect] = useState(false)
     const [posts, setPosts] = useState(0)
     const [preview, setPreview] = useState(true)

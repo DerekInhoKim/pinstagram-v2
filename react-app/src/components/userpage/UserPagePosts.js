@@ -43,12 +43,10 @@ const UserPagePosts = ({userId}) => {
     })
 
     const handlePost = () => {
-        // console.log('post')
         setStatus('posts')
     }
 
     const handlePinned = () => {
-        // console.log('pinned')
         setStatus('pinned')
     }
 

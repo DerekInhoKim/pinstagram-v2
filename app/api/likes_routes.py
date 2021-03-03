@@ -4,7 +4,7 @@ from app.models import db, Like
 
 likes_routes = Blueprint('likes', __name__)
 
-
+# Creates a like
 @likes_routes.route('/create', methods=['POST'])
 def createLike():
     req_data = request.get_json()
@@ -24,7 +24,7 @@ def createLike():
     except IntegrityError:
         return {'errors': 'User already likes'}, 404
 
-
+# Removes a like
 @likes_routes.route('/delete', methods=['DELETE'])
 def deleteLike():
     req_data = request.get_json()

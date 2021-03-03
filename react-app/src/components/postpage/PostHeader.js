@@ -47,10 +47,12 @@ const PostHeader = () => {
         setIsFollowingState(followingStatus)
     }
 
+    // Handles the display of the delete button
     const showDelete =  () => {
         setDeleteModal(true)
     }
 
+    // Handles the display of the delete button
     const hideDelete = () => {
         setDeleteModal(false)
     }

@@ -5,7 +5,7 @@ from app.forms import CommentForm
 
 comments_route = Blueprint('comments', __name__)
 
-
+# This route will create a new comment
 @comments_route.route('/create', methods=['POST'])
 def createComment():
     form = CommentForm()
@@ -24,7 +24,7 @@ def createComment():
     else:
         return {'error': 'Form not valid'}, 404
 
-
+# This route will return all comments for a post
 @comments_route.route('/post/<int:postId>', methods=['GET'])
 def getComments(postId):
     comments = Comment.query.join(User).filter(Comment.postId == postId).order_by(Comment.createdAt.desc()).all()

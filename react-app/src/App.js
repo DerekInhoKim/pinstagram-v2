@@ -25,6 +25,8 @@ function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch()
 
+  // This will set the Redux state for the user, as well as the followers and following users for
+  // the logged in user
   useEffect(() => {
     (async() => {
       const user = await authenticate();

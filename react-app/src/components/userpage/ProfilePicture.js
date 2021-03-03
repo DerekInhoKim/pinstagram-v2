@@ -16,18 +16,23 @@ const ProfilePictureUpload = ({setAuthenticated}) => {
     const dispatch = useDispatch()
     let history = useHistory()
 
+    // Sets the image as the file that has been submitted
     const setImageHelper = (e) => {
         setImage(e.target.files[0])
     }
 
+    // Handles the post type as a file upload
     const setUploadPostType = () => {
         setPostType("upload")
     }
 
+    // Handles the post type as the camera option
     const setCameraPostType = () => {
         setPostType("camera")
     }
 
+    // Fires when a profile picture is submitted, will update the user in redux, as well as
+    // updates the database with the user's new photo
     const submitProfilePicture = async (e) => {
         e.preventDefault();
         const data = new FormData();
