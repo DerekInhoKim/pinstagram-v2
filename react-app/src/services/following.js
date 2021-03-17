@@ -1,8 +1,10 @@
+// Returns posts for users that the currentUser is following
 export const getFollowingPosts = async (userId) => {
     const response = await fetch(`/api/follows/${userId}/posts`)
     return await response.json()
 }
 
+// Returns posts for users that the currentUser is not following
 export const getNotFollowingPosts = async (userId) => {
     const response = await fetch(`/api/follows/${userId}/unfollowed/posts`)
     return await response.json()
