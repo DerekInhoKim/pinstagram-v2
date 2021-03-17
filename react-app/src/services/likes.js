@@ -24,6 +24,7 @@ export const likePost = async (postId, userId) => {
     return await response.json()
 }
 
+// This route will remove a like from a post
 export const dislikePost = async (postId, userId) => {
     const response= await fetch('/api/likes/delete', {
         method: 'DELETE',
