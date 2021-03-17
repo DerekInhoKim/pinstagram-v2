@@ -4,6 +4,7 @@ export const getPost = async (postId) => {
     return await response.json()
 }
 
+// Sends a request to delete a post
 export const deletePost = async(postId) => {
   const response = await fetch(`/api/posts/${postId}`, {
     method: 'DELETE',
@@ -21,11 +22,13 @@ export const getPosts = async (userId) => {
 
 }
 
+// Returns posts that a user has pinned
 export const getPinnedPosts = async(userId) => {
   const response = await fetch(`/api/posts/user/${userId}/pinned`)
   return await response.json()
 }
 
+// Sends a request to create a post
 export const createPost = async(caption, imageUrl) => {
     const response = await fetch('/api/posts/create', {
       method: 'POST',
@@ -40,6 +43,7 @@ export const createPost = async(caption, imageUrl) => {
     return await response.json()
 }
 
+// Sends a request to upload an image onto s3
 export const uploadImage = async (data) => {
     const res = await fetch('/api/s3/upload', {
       method: 'POST',
