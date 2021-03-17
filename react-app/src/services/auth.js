@@ -7,6 +7,7 @@ export const authenticate = async() => {
   return await response.json();
 }
 
+// Sends a rerquest to log a user in
 export const login = async (email, password) => {
   const response = await fetch('/api/auth/login', {
     method: 'POST',
@@ -22,6 +23,7 @@ export const login = async (email, password) => {
   return await response.json();
 }
 
+// Sends a request to log a user out
 export const logout = async () => {
   const response = await fetch("/api/auth/logout", {
     headers: {
@@ -31,7 +33,7 @@ export const logout = async () => {
   return await response.json();
 };
 
-
+// Sends a request to create a new user
 export const signUp = async (fullname, username, email, password) => {
   const response = await fetch("/api/auth/signup", {
     method: "POST",
@@ -48,6 +50,7 @@ export const signUp = async (fullname, username, email, password) => {
   return await response.json();
 }
 
+// Sends a request update a user's info
 export const editUser = async (fullname, username, about) => {
   const response = await fetch("/api/auth/edit", {
     method: "PUT",
